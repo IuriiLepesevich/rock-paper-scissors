@@ -51,4 +51,6 @@ function game() {
     }
 }
 
-game();
+const button = document.querySelector("#startGame");
+
+button.addEventListener('click', game);
