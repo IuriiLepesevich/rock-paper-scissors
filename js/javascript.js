@@ -4,11 +4,11 @@
     The options are located in strict order, so element 'i' beats element 'i - 1'
     and looses to element 'i + 1'. This logic will be used in further algorithms.
 */
-const playOptions = ['Rock', 'Paper', 'Scissors']
+const gameOption = ['Rock', 'Paper', 'Scissors']
 
 // Declare function getting random computer game choice
 function getComputerChoice() {
-    return playOptions[Math.floor(Math.random() * 3)];
+    return gameOption[Math.floor(Math.random() * 3)];
 }
 
 // Declare function that plays one single round of the game
@@ -22,8 +22,8 @@ function playRound(playerChoice, computerChoice) {
     pChoice = pChoice.replace(pChoice[0], pChoice[0].toUpperCase());
 
     // Get indexes of player and computer choices from game options
-    let playerIndex = playOptions.indexOf(pChoice);
-    let computerIndex = playOptions.indexOf(computerChoice);
+    let playerIndex = gameOption.indexOf(pChoice);
+    let computerIndex = gameOption.indexOf(computerChoice);
     
     // Check if user input exist in game choices
     if (playerIndex === -1) return 'Invalid input';
@@ -35,7 +35,7 @@ function playRound(playerChoice, computerChoice) {
     let indexDistance = playerIndex - computerIndex;
 
     // Check game options logic and return round result
-    if (indexDistance === 1 || indexDistance === -(playOptions.length - 1)) {
+    if (indexDistance === 1 || indexDistance === -(gameOption.length - 1)) {
         return `You Win! ${pChoice} beats ${computerChoice}`;
     } else {
         return `You Lose! ${computerChoice} beats ${pChoice}`;
