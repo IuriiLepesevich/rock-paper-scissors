@@ -5,11 +5,11 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
+    
+    if (!playerChoice) return 'Invalid input';
+    
     let pChoice = playerChoice.toLowerCase();
     pChoice = pChoice.replace(pChoice[0], pChoice[0].toUpperCase());
-
-    console.log(pChoice);
-    console.log(computerChoice);
 
     if (pChoice === computerChoice) return 'Tie game!';
 
@@ -38,3 +38,13 @@ function playRound(playerChoice, computerChoice) {
         return `You Lose! ${computerChoice} beats ${pChoice}`;
     }
 }
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(`%cRound ${i + 1}!\n`, `font-size: 20px;`);
+        console.log(playRound(prompt("Rock, Scissors or Paper?"),
+        getComputerChoice()));
+    }
+}
+
+game();
