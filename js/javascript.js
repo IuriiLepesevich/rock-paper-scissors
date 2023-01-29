@@ -44,6 +44,7 @@ function playRound(playerChoice, computerChoice) {
 
 // Declare function that plays the game (5 rounds)
 function game() {
+    console.clear();
     for (let i = 0; i < 5; i++) {
         console.log(`%cRound ${i + 1}!\n`, `font-size: 20px;`);
         console.log(playRound(prompt("Rock, Scissors or Paper?"),
@@ -52,5 +53,4 @@ function game() {
 }
 
 const button = document.querySelector("#startGame");
-
 button.addEventListener('click', game);
