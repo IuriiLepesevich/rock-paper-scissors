@@ -51,7 +51,7 @@ function colorButtonsBorder(playerChoice, computerChoice) {
 }
 
 // Function resets game it it's starting state
-function clearButtonsBorderBorder() {
+function clearButtonsBorder() {
     buttons.forEach(button => button.style.borderColor = 'black');
 }
 
