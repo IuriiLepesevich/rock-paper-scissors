@@ -36,7 +36,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    flex: 1 0 158px;
+    flex: 1;
     gap: 10%;
 }
 
@@ -48,5 +48,9 @@ h1 {
     background-color: #C6E2E9;
     border: 8px solid black;
     border-radius: 10px;
-    flex: 1;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
 }
