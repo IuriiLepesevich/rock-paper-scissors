@@ -90,10 +90,15 @@ function resetGame() {
     playerScore = 0;
     scoreElem.textContent = `${playerScore}-${compScore}`;
     clearButtonsBorder();
-    buttons.forEach(button2 => button2.removeEventListener('click', resetGame, {once: true}));
 }
 
 buttons.forEach(button => button.addEventListener('click', () => {
+    
+    if (playerScore >= 5 || compScore >= 5) {
+        resetGame();
+        return;
+    }
+    
     const computerChoice = getComputerChoice();
     const playerChoice = button.dataset.option;
 
@@ -107,10 +112,8 @@ buttons.forEach(button => button.addEventListener('click', () => {
     if (playerScore >= 5) {
         resultElem.style.color = 'green';
         resultElem.textContent = "You won! Press button to play again.";
-        buttons.forEach(button2 => button2.addEventListener('click', resetGame, {once: true}));
     } else if (compScore >= 5) {
         resultElem.style.color = 'red';
         resultElem.textContent = "You lost! Press button to play again.";
-        buttons.forEach(button2 => button2.addEventListener('click', resetGame, {once: true}));
     }
 }));
