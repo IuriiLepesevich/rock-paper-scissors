@@ -2,6 +2,7 @@ body {
     background-color: #FEECC8;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -9,35 +10,35 @@ body {
 
 h1 {
     display: flex;
-    font-size: 80px;
+    font-size: 6vw;
+    margin: 4vh;
 }
 
 .container {
     display: flex;
-    min-width: 900px;
-    margin-top: 100px;
+    margin-top: 4vh;
     flex-direction: column;
-    gap: 50px;
+    gap: 0.9vw;
     background-color: rgba(255, 216, 216, 0.9);
-    padding: 20px 40px;
-    border-radius: 25px;
+    padding: 0.7vw 3vw;
+    border-radius: 2vw;
 }
 
 .result {
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .score {
-    font-size: 60px;
+    font-size: 4vw;
     font-weight: 600;
 }
 
 .button-holder {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex: 1;
-    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    gap: 7vw;
+    flex: 1 1 auto;
 }
 
 .buttons {
@@ -46,11 +47,12 @@ h1 {
     align-items: center;
     font-size: 35px;
     background-color: #C6E2E9;
-    border: 8px solid black;
-    border-radius: 10px;
+    border: 0.5vw solid black;
+    border-radius: 0.5vw;
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 15vw;
+    flex: 1 1 auto;
 }
